@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FiveToSeven___Endpoints.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ReverseItWordController : ControllerBase
     {
         private readonly ReverseItWordService _reverseItWordService;
@@ -19,15 +19,6 @@ namespace FiveToSeven___Endpoints.Controllers
             if (string.IsNullOrEmpty(input))
             {
                 return "Input cannot be empty.";
-            }
-
-
-            foreach (char c in input)
-            {
-                if (!char.IsLetter(c))
-                {
-                    return "Input must only contain letters (A-Z, a-z).";
-                }
             }
             var reversed = _reverseItWordService.ReverseWord(input);
             return $"You entered {input}, reversed is {reversed}";

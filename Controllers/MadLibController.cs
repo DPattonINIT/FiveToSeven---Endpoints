@@ -14,7 +14,7 @@ namespace FiveToSeven___Endpoints.Controllers
             _madLibService = madLibService;
         }
 
-        [HttpPost("generate/{noun1}/{noun2}/{noun3}/{noun4}/{noun5}/{adjective1}/{adjective2}/{adjective3}/{adjective4}/{adjective5}")]
+        [HttpPost("{noun1}/{noun2}/{noun3}/{noun4}/{noun5}/{adjective1}/{adjective2}/{adjective3}/{adjective4}/{adjective5}")]
     public string GenerateStory(
         string noun1, string noun2, string noun3, string noun4, string noun5, 
         string adjective1, string adjective2, string adjective3, string adjective4, string adjective5)

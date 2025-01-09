@@ -7,7 +7,7 @@ using FiveToSeven___Endpoints.Services;
 namespace FiveToSeven___Endpoints.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class ReverseItNumberController : ControllerBase
     {
         private readonly ReverseItNumberService _reverseItNumberService;
